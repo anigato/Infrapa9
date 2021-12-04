@@ -1,18 +1,23 @@
 <?php
-   define( 'DB_NAME', 'Infrapa9' );
-   define( 'DB_USER', 'Infrapa9' );
-   define( 'DB_PASSWORD', '' );
-   define( 'DB_HOST', '103.31.38.73' );
+   // define( 'DB_NAME', 'Infrapa9' );
+   // define( 'DB_USER', 'Infrapa9' );
+   // define( 'DB_PASSWORD', '' );
+   // define( 'DB_HOST', '103.31.38.73' );
    $host = '103.31.38.73';
    $user = 'Infrapa9';
    $pass = '';
    $db_name = 'Infrapa9';
 
    $conn = mysqli_connect($host,$user,$pass,$db_name);
-
+   if (!$conn) {
+      die ('Gagal terhubung MySQL: ' . mysqli_connect_error());	
+   }
    $sql = 'select*from mahasiswa';
 
    $query = mysqli_query($conn,$sql);
+   if (!$query) {
+      die ('SQL Error: ' . mysqli_error($conn));
+   }
 ?>
 <html>
    <head>
