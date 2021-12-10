@@ -35,8 +35,8 @@
                while ($row = mysqli_fetch_array($query))
                {
                ?>
-               <div class="col-lg-3 mt-2">
-                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="anam.jpg" alt="Khoerul Anam">
+               <div class="col-lg-6 mt-2">
+                  <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="<?= $row['img'] ?>" alt="<?= $row['nama'] ?>">
                   <h2><?= $row['npm'] ?></h2><h4><?= $row['nama'] ?></h4>
                </div>
                <?php } ?>
