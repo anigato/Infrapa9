@@ -5,7 +5,7 @@
    // define( 'DB_HOST', '103.31.38.73' );
    $host = '103.31.38.73';
    $user = 'Infrapa9';
-   $pass = '';
+   $pass = 'Infrapa9';
    $db_name = 'Infrapa9';
 
    $conn = mysqli_connect($host,$user,$pass,$db_name);
